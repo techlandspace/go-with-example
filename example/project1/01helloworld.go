@@ -1,4 +1,4 @@
-package main
+package project01
 
 import "fmt"
 
@@ -8,6 +8,6 @@ import "fmt"
 2.go语言不需要以分号结尾，这些工作由go编译器自动完成
 */
 
-func main() {
-	fmt.Printf("Hello World")
+func printstr() {
+	fmt.Printf("Hello World\n")
 }
