@@ -39,3 +39,30 @@ func basicDataType() {
 	var i byte = 1
 	fmt.Printf("i === %d\n", i)
 }
+
+/**
+基本数据类型的初始化方法比较简单，这里主要列举一下其他类型的初始化方法。
+*/
+
+func NewObject() {
+	//array
+	var arr1 [5]int = [5]int{1, 2, 3, 4, 5} //指定长度赋值
+	var arr2 = [5]int{1, 2, 3, 4, 5}        //省略长度，编译器自动推断
+	var arr3 = [...]int{1, 2, 3}            //编译器计算长度
+	var arr4 = [5]int{1, 2, 3}              //部分初始化，剩余元素默认为0
+	var arr5 = [5]int{0: 1, 1: 2}           //键值对初始化
+	fmt.Printf("arr1 === %v\n", arr1)
+	fmt.Printf("arr2 === %v\n", arr2)
+	fmt.Printf("arr3 === %v\n", arr3)
+	fmt.Printf("arr4 === %v\n", arr4)
+	fmt.Printf("arr5 === %v\n", arr5)
+
+	//struct
+	var peoplep = people{
+		height: 182.4,
+		weight: 72.3,
+		age:    20,
+		gender: "男",
+	}
+	fmt.Printf("people === %#v\n", peoplep)
+}
